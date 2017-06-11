@@ -52,10 +52,10 @@ Leetcode中有[一道题](https://leetcode.com/problems/maximum-subarray/#/descr
 **代码片段1**
 
 ```
-//这段代码展示的是**寻找最大非空子数组算法**中的“寻找待处理数组中，一部分在左边数组，另一部分又在右边数组里的，最大子数组”这一过程，而非**寻找最大非空子数组算法**的全部。
+//这段代码展示的是 寻找最大非空子数组算法 中的“寻找待处理数组中，一部分在左边数组，另一部分又在右边数组里的，最大子数组”这一过程，而非**寻找最大非空子数组算法**的全部。
 //待找出最大子数组的数组为A，low、mid和high 分别代表这个最大子数组在最初处理的那个数组中的首元素下标、中间元素下标 和 尾部元素下标。
 // sum是一个临时变量，用于几轮求和的临时值。
-//left-sum和right-sum分别目前找到**"最大横跨左右子数组"**中最大的元素值之和。max-left和max-right分别代表我们找到的"一部分在左边数组，另一部分又在右边数组里的，最大子数组"相对于初始数组的最左边元素下标和最右边元素下标。
+//left-sum和right-sum分别目前找到 "最大横跨左右子数组" 中最大的元素值之和。max-left和max-right分别代表我们找到的"一部分在左边数组，另一部分又在右边数组里的，最大子数组"相对于初始数组的最左边元素下标和最右边元素下标。
 FIND-MAX-CROSSING-SUBARRAY(A,low,mid,high)
 	left-sum = -∞
 	sum = 0
@@ -79,7 +79,7 @@ FIND-MAX-CROSSING-SUBARRAY(A,low,mid,high)
 **代码片段2**
 
 ```
-//这段代码展示的是整个**寻找最大非空子数组算法**函数，这个函数通过调用上面的FIND-MAX-CROSSING-SUBARRAY函数进行递归的寻找最大子数组。
+//这段代码展示的是整个 寻找最大非空子数组算法 函数，这个函数通过调用上面的FIND-MAX-CROSSING-SUBARRAY函数进行递归的寻找最大子数组。
 //left-low,left-high、right-low,right-high代表已找到的左右子数组中的最大数组。
 //left-sum、right-sum和cross-sum是指找到的左中右三个最大子数组分别的元素之和的最大值。
 FIND-MAXIMUM-SUBARRAY(A,low,high)
