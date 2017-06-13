@@ -1,11 +1,9 @@
-#include <iostream>
 #include <vector>
+#include "StrassenCore.h"
 
 using namespace std;
 
 vector<vector<int>> NormalMatrixMultiply(const vector<vector<int>> &A, const vector<vector<int>> &B);
-
-vector<vector<int>> StrassenMatrixMultiply(const vector<vector<int>> &A, const vector<vector<int>> &B);
 
 int main()
 {
@@ -48,43 +46,7 @@ int main()
 
 	///////////////////Strassen方阵乘法///////////////////////////
 
-	vector<vector<int>> D{ { 1,3 },{ 7,5 } };
-	vector<vector<int>> E{ { 6,8 },{ 4,2 } };
-
-	cout << "原始矩阵D：" << endl;
-	for (auto v : D)
-	{
-		for (auto i : v)
-		{
-			cout << i << " ";
-		}
-		cout << endl;
-	}
-
-	cout << "原始矩阵E：" << endl;
-	for (auto v : E)
-	{
-		for (auto i : v)
-		{
-			cout << i << " ";
-		}
-		cout << endl;
-	}
-
-	//现验证这两个被乘的矩阵的确实是行列均为n^2的方阵。
-
-
-	vector<vector<int>> F = StrassenMatrixMultiply(D, E);
-
-	cout << "用Strassen方阵乘法得到的矩阵D*E：" << endl;
-	for (auto v : F)
-	{
-		for (auto i : v)
-		{
-			cout << i << " ";
-		}
-		cout << endl;
-	}
+	Strassen();
 
 	return 0;
 }
@@ -113,14 +75,5 @@ vector<vector<int>> NormalMatrixMultiply(const vector<vector<int>> &A, const vec
 			result.push_back(tempLine);
 		}
 	}
-	return result;
-}
-
-vector<vector<int>> StrassenMatrixMultiply(const vector<vector<int>> &A, const vector<vector<int>> &B)
-{
-	vector<vector<int>> result;
-	
-	//未完成
-
 	return result;
 }
