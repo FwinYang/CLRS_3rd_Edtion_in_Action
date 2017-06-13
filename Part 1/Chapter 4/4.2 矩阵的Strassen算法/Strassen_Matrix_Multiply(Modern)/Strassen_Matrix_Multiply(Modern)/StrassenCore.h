@@ -329,6 +329,10 @@ void Strassen()
 
 	std::cout << "\n¾ØÕóÔËËã½á¹û... \n";
 	stra.PrintMatrix(MatrixC, MatrixSize);
+
+	delete[] MatrixA;
+	delete[] MatrixB;
+	delete[] MatrixC;
 }
 
 #endif
