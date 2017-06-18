@@ -7,7 +7,7 @@ vector<int> Count_Sort(const vector<int> &A);
 
 int main()
 {
-	vector<int> A = { 2,8,6,7,1,4,10,5,3,9,6,4 };
+	vector<int> A = { 2,8,6,7,1,4,10,5,3,9,6,4,0,99 };
 
 	cout << "初始的数组：" << endl;
 	for (const auto num : A)
@@ -30,8 +30,8 @@ int main()
 
 vector<int> Count_Sort(const vector<int> &A)
 {
-	//这个计数排序能容纳的元素的最大值是1 ~ 100。
-	int k = 101;
+	//这个计数排序能容纳的元素的最大值是0 ~ 99。
+	int k = 100;
 
 	vector<int> countArray(k,0),result;
 	for (const auto &num : A)
@@ -39,7 +39,7 @@ vector<int> Count_Sort(const vector<int> &A)
 		countArray[num] += 1;
 	}
 
-	for (int i = 1;i<countArray.size();++i)
+	for (int i = 0;i<countArray.size();++i)
 	{
 		for (int j = 0;j<countArray[i];++j)
 		{

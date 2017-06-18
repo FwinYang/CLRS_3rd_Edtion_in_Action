@@ -34,7 +34,7 @@ A[p..q-1]和A[q+1..r]，使得A[p..q+1]中的每一个元素都比A[q]小（或�
 -----------
 
 ```
-QUICKSORT(A, p, r)
+RANDOM-QUICKSORT(A, p, r)
 	if q < r
 		q = PARTITION(A, q, r)
 		QUICKSORT(A, p, q-1)
@@ -52,4 +52,25 @@ PARTITION(A, q, r)
 			交换A[i]和A[j]
 	交换A[i+1]和A[r]
 	return i + 1
+```
+
+书上原版的算法伪代码
+-----------------------
+//以下是书上写的伪代码，不过我们觉得上面的写法比较直观。
+//RANDOM(q, r)是一个函数，这个函数在q~r之间生成一个随机整数。
+```
+RANDOMIZED-PARTITION(A, q, r)
+	i = RANDOM(q, r)
+	把A[i]和A[r]的值互换
+	//下面的 PARTITION 函数是指 7.1中的PARTITION函数。
+	return PARTITION(A, q, r)
+```
+
+```
+//主调函数。
+RANDOMIZED-QUICKSORT(A, p, r)
+	if q < r
+		q = PRANDOMIZED-ARTITION(A, q, r)
+		RANDOMIZED-QUICKSORT(A, p, q-1)
+		RANDOMIZED-QUICKSORT(A, p+1, r)
 ```
