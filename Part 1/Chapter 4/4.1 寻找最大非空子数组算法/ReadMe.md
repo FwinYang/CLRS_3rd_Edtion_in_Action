@@ -67,7 +67,7 @@ FIND-MAX-CROSSING-SUBARRAY(A,low,mid,high)
 		
 	right-sum = -∞
 	sum = 0
-	for i = mid+1 to high
+	for j = mid+1 to high
 		sum = sum + A[j]
 		if sum > right-sum
 			right-sum = sum
