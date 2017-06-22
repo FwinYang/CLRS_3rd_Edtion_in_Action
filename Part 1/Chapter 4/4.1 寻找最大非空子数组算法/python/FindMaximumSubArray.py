@@ -1,8 +1,4 @@
 # -*-coding:utf8-*-
-# Find the Maximum Sub Array
-# x = [13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7]
-
-
 def find_max_subarray(listx):
     lenth = len(listx)
     if lenth == 1:
@@ -38,5 +34,5 @@ def find_max_crossing(listx, mid):
             rightmax = sum
     return rightmax + leftmax
 
-
-# print find_max_subarray(x)
+# listx = [13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7]
+# print find_max_subarray(listx)

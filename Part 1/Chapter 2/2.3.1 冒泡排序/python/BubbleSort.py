@@ -1,6 +1,4 @@
 # -*-coding:utf8-*-
-# BubbleSort By Xu
-# x=[5,4,3,2,1]
 def BubbleSort(listx):
     lenth = len(listx)
     for i in range(lenth):
@@ -9,4 +7,6 @@ def BubbleSort(listx):
                 listx[j - 1], listx[j - 2] = listx[j - 2], listx[j - 1]
     return listx
 
-# print BubbleSort(x)
+
+# listx = [5, 4, 3, 2, 1]
+# print BubbleSort(listx)

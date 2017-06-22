@@ -1,6 +1,4 @@
 # -*-coding:utf8-*-
-# MergeSort By Xu
-# a = [5, 4, 3, 2, 1]
 def Merge(list1, list2):
     x = len(list1)
     y = len(list2)
@@ -34,4 +32,5 @@ def MergeSort(listx):
         B = MergeSort(listx[mid:lenth])
         return Merge(A, B)
 
-        # print MergeSort(a)
+# listx = [5, 4, 3, 2, 1]
+# print MergeSort(listx)
