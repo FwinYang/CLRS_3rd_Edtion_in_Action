@@ -1,27 +1,28 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Find_Maximum_SubArray
 {
     class Program
     {
-
-        static int count = 0;
-
         static void Main(string[] args)
         {
-            List<int> A = new List<int>{ 13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7 } ;
-            Console.WriteLine("original:" + string.Join(",",A));
-            
+            List<int> A = new List<int> { 13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7 };
+            Console.WriteLine("Original:" + string.Join(",", A));
 
-            var result = FindMaximunSubarray(A, 0, A.Count);
 
-            Console.WriteLine("MaximunSubarray:");
-            for (int index = result.Item1;index < result.Item2; index ++)
+            var result = FindMaximunSubarray(A, 0, A.Count - 1);
+
+            Console.Write("MaximunSubarray: ");
+            for (int index = result.Item1; index <= result.Item2; index++)
             {
-                Console.WriteLine(A[index]);
+                Console.Write(A[index] + " ");
             }
+            Console.Write("\n");
+
             Console.WriteLine("MaximunSubarray:" + result.Item3);
             Console.ReadKey();
 
@@ -29,7 +30,7 @@ namespace Find_Maximum_SubArray
         }
 
 
-        static  Tuple<int, int, int> FindMaxCrossingSubarray(List<int> A, int low, int mid, int high)
+        static Tuple<int, int, int> FindMaxCrossingSubarray(List<int> A, int low, int mid, int high)
         {
             int maxLeft = 0;
             int leftSum = int.MinValue, sum = 0;
@@ -51,10 +52,10 @@ namespace Find_Maximum_SubArray
 
             int maxRight = 0;
             int rightSum = int.MinValue;
-            for (int index = mid + 1; index < high; index++)
+            for (int index = mid + 1; index <= high; index++)
             {
                 sum = sum + A[index];
-                if (sum >= maxRight)
+                if (sum >= rightSum)
                 {
                     rightSum = sum;
                     maxRight = index;
@@ -69,16 +70,15 @@ namespace Find_Maximum_SubArray
         {
             if (high == low)
             {
-               // Console.WriteLine(count++);
+                // Console.WriteLine(count++);
                 return Tuple.Create<int, int, int>(low, high, A[low]);
-
             }
-               
+
             else
             {
                 var mid = (low + high) / 2;
                 var leftResult = FindMaximunSubarray(A, low, mid);
-                var rightResult = FindMaximunSubarray(A, mid+1, high);
+                var rightResult = FindMaximunSubarray(A, mid + 1, high);
                 var crossResult = FindMaxCrossingSubarray(A, low, mid, high);
                 if (leftResult.Item3 >= rightResult.Item3 && leftResult.Item3 >= crossResult.Item3)
                     return leftResult;
@@ -88,27 +88,5 @@ namespace Find_Maximum_SubArray
             }
 
         }
-
-        //int findMaxSubArray(int[] a, int n)
-        //{
-        //    int result = a[0];
-        //    int sum = a[0];
-
-        //    for (int i = 1; i < n; ++i)
-        //    {
-        //        if (sum > 0)
-        //            sum += a[i];
-        //        else
-        //            sum = a[i];
-
-        //        if (sum > result)
-        //            result = sum;
-        //    }
-
-        //    return result;
-        //}
-
     }
-
-
 }
