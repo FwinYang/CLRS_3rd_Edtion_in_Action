@@ -36,8 +36,8 @@ int Hash(int key)
 	uniform_int_distribution<unsigned> Zb(0, p - 1);
 	static default_random_engine e;
 
-	int a = Za(e);
-	int b = Zb(e);
+	static int a = Za(e);
+	static int b = Zb(e);
 
 	return ((a*key+b)%p)%m;
 }
