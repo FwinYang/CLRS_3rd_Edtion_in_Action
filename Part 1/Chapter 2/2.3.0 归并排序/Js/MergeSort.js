@@ -1,7 +1,7 @@
 var numArr = [2,8,6,7,1,10,5,3,11,9,4];
 
-document.write("初始的数组:</br>");
-document.write(numArr+"</br>");
+console.log("初始的数组:\n");
+console.log(numArr+"\n");
 
 function sort2Arr(arr1,arr2)
 {
@@ -36,5 +36,5 @@ function mergeSort(nArr){
 
 var sortedArr = mergeSort(numArr);
 
-document.write("排序后的数组:</br>");
-document.write(sortedArr+"</br>");
+console.log("排序后的数组:\n");
+console.log(sortedArr+"\n");

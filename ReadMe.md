@@ -8,11 +8,11 @@
 
 |       语言        |         语法标准        |       实现所用的IDE        |
 |:-------------:|:-------------------:|:------------------------:|
-|      C++        |           C++17        |     VisualStudio 2017    |
-|      Java        |            Java8          |            仅源代码             |
-|  JavaScript  | ECMAScript 2015 |            仅源代码             |
-|       C#          |             C#7           |     VisualStudio 2017    |
-|     python    |        python2.7      |            仅源代码             |
+|      C++        |          C++ 17        |     VisualStudio 2017    |
+|      Java        |           Java 8          |            仅源代码             |
+|  JavaScript  |     ECMAScript 6   |            仅源代码             |
+|       C#          |            C# 7           |     VisualStudio 2017    |
+|     python    |       python 2.7      |            仅源代码             |
 
 某些语言版本里，有些算法可能有两种风格不同的实现：一种实现更贴近算法导论中的伪代码描述，另一种则可能会包含一些对应语言的语法糖和库组件。无论是哪种实现，我们都会避免使用一些高级语言特性，更专注于算法本身。
 
@@ -99,6 +99,6 @@
 贡献者（按贡献的代码量顺序）
 --------------------------------
 - [TiriSane](https://github.com/TiriSane)
-- [yehuo](https://github.com/yehuo)
+- [Sitong](https://github.com/yehuo)
 - [小楠](https://www.niconi.cn/)
 - [liguobao](http://codelover.link:2017)
