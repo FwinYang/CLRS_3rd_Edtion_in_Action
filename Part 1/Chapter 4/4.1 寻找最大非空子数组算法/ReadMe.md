@@ -86,7 +86,7 @@ FIND-MAXIMUM-SUBARRAY(A,low,high)
 		(left-low, left-high, left-sum) = 
 			FIND-MAXIMUM-SUBARRAY(A,low,mid)
 		(right-low, right-high, right-sum) = 
-			FIND-MAXIMUM-SUBARRAY(A,mie+1,high)
+			FIND-MAXIMUM-SUBARRAY(A,mid+1,high)
 		(cross-low, cross-high, cross-sum) = 
 			FIND-MAX-CROSSING-SUBARRAY(A, low, mid, high)
 			

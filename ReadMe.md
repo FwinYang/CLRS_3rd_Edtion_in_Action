@@ -11,7 +11,7 @@
 |      C++        |           C++17        |     VisualStudio 2017    |
 |      Java        |            Java8          |            仅源代码             |
 |  JavaScript  | ECMAScript 2015 |            仅源代码             |
-|       C#         |              C#7           |     VisualStudio 2017    |
+|       C#          |             C#7           |     VisualStudio 2017    |
 |     python    |        python2.7      |            仅源代码             |
 
 某些语言版本里，有些算法可能有两种风格不同的实现：一种实现更贴近算法导论中的伪代码描述，另一种则可能会包含一些对应语言的语法糖和库组件。无论是哪种实现，我们都会避免使用一些高级语言特性，更专注于算法本身。
