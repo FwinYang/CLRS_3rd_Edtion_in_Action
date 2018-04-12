@@ -17,7 +17,7 @@ int main()
 	MPQ.ExtractMax();
 	MPQ.print();
 
-	cout << "把第四个元素2的值提升成11"<<endl;
+	cout << "把第四个元素4的值提升成11"<<endl;
 	MPQ.HeapIncreaseKey(3,11);
 	MPQ.print();
 
