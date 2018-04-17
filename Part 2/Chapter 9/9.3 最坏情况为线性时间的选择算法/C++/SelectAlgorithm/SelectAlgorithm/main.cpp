@@ -18,7 +18,7 @@ int main()
 	}
 	cout << endl;
 
-	cout<<"数组A中第7小的数是："<<Select(A, 10)<<endl;
+	cout<<"数组A中第7小的数是："<<Select(A, 7)<<endl;
 
 	return 0;
 }
